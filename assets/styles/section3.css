@@ -1,0 +1,191 @@
+.section3{
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: #1FA65A;
+    padding: 7rem;
+    gap: 5rem;
+}
+.services-section {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    gap: 3rem;
+}
+.hero-section3 {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+}
+:root {
+    --primary-green: #37A46A; 
+    --accent-green: #10B981; 
+    --text-white: #ffffff;
+    --text-light-green: rgba(255, 255, 255, 0.9);
+    --text-faded-green: rgba(255, 255, 255, 0.7);
+    --border-light: rgba(255, 255, 255, 0.2);
+    --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+.fl-services-section {
+    background-color: var(--primary-green);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-white);
+    padding: 4rem 1.5rem;
+    line-height: 1.6;
+}
+
+.fl-services-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.fl-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fl-main-heading {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--text-white);
+}
+
+.fl-intro-text {
+    font-size: 1.1rem;
+    color: var(--text-light-green);
+    max-width: 60ch;
+    margin: 0;
+}
+
+.fl-specialities-button {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-green);
+    color: var(--text-white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.fl-specialities-button:hover {
+    background-color: #0d965e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-light);
+    border-color: var(--text-white);
+}
+
+.fl-services-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.fl-service-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.fl-service-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-light);
+    border-color: var(--accent-green);
+}
+
+.fl-service-icon svg {
+    color: var(--accent-green);
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+}
+
+.fl-service-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--text-white);
+}
+
+.fl-service-description {
+    font-size: 0.95rem;
+    color: var(--text-faded-green);
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .fl-services-container {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .fl-main-content {
+        flex: 1;
+        justify-content: center;
+        padding-right: 2rem;
+    }
+
+    .fl-services-list {
+        flex: 1.5;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .fl-service-item {
+        padding: 1.8rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .fl-services-container {
+        gap: 6rem;
+    }
+
+    .fl-main-heading {
+        font-size: 3.8rem;
+    }
+
+    .fl-services-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+.hero-section3 h1{
+    color: white;
+    font-size: 50px;
+}
+.hero-section3 span {
+    color: white;
+    font-weight: 400;
+}
+.services-section h1{
+    font-size: 25px;
+    color: white;
+}
+.services-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.services-item span {
+    color: white;
+    font-weight: 400;
+}

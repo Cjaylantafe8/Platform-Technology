@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-green: #37A46A; /* Darker green background */
+    --text-dark: #222222;
+    --text-gray: #4a4a4a;
+    --text-light-green: #ffffff;
+    --text-green-heading: #37A46A; /* Green color for headings on white background */
+    --accent-orange: #E67E22; /* Accent color for labels */
+}
+
+.fl-mv-section {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Common container to limit width for centered content */
+.fl-mv-content-container {
+    max-width: 60rem; /* Wide but contained text block */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+/* --- Top Section: Leadership/Intro (White Background) --- */
+.fl-mv-intro {
+    background-color: white;
+    padding: 3rem 1.5rem 2rem;
+    text-align: center;
+}
+
+.fl-mv-label-top {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+.fl-mv-heading-top {
+    font-size: clamp(2.2rem, 5vw, 3rem); 
+    font-weight: 800; 
+    line-height: 1.2;
+    margin: 0;
+    color: var(--text-green-heading);
+    max-width: 25ch; /* Keeps heading compact and readable */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Middle Section: Mission (Green Background) --- */
+.fl-mv-mission {
+    background-color: var(--primary-green);
+    padding: 4rem 1.5rem;
+}
+
+.fl-mv-label-middle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+.fl-mv-heading-middle {
+    font-size: clamp(2.2rem, 5vw, 3rem); 
+    font-weight: 800; 
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: var(--text-light-green);
+}
+
+.fl-mv-description-middle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Bottom Section: Vision (White Background) --- */
+.fl-mv-vision {
+    background-color: white;
+    padding: 4rem 1.5rem;
+}
+
+.fl-mv-label-bottom {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+.fl-mv-heading-bottom {
+    font-size: clamp(2rem, 4.5vw, 2.8rem); 
+    font-weight: 800; 
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: var(--text-green-heading);
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fl-mv-description-bottom {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin: 0;
+    max-width: 90ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Desktop Adjustments */
+@media (min-width: 768px) {
+    .fl-mv-intro {
+        padding: 4rem 2rem 3rem;
+    }
+    
+    .fl-mv-mission,
+    .fl-mv-vision {
+        padding: 6rem 2rem;
+    }
+
+    .fl-mv-heading-top,
+    .fl-mv-heading-middle,
+    .fl-mv-heading-bottom {
+        font-size: 3.5rem;
+    }
+
+    .fl-mv-heading-bottom {
+        font-size: 3rem;
+    }
+}

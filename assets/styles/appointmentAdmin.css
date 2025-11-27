@@ -1,0 +1,43 @@
+
+.adminappointment {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+
+.adminappointment h1 {
+    text-align: center;
+    color: #289759; 
+    margin-bottom: 20px;
+}
+
+
+.adminappointment table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #289759;
+}
+
+
+.adminappointment th {
+    background-color: #289759; 
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+
+.adminappointment td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #289759;
+}
+
+
+.adminappointment a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,198 @@
+.connect-text{
+    font-size: 40px;
+    color: #289759;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+:root {
+    --primary-green: #10B981;
+    --bg-light: #f3f4f6; 
+    --text-color: #4b5563; 
+}
+
+
+.contact-section {
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+    max-width: 80rem; 
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+  
+    margin-left: auto;
+    margin-right: auto;
+  
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+}
+
+
+.image-column {
+    position: relative;
+    background-color: #f9fafb;
+    padding: 1.5rem; 
+}
+
+
+.graphic-frame {
+    position: relative;
+    height: 100%;
+    min-height: 24rem; 
+}
+
+
+.graphic-frame::before {
+    content: '';
+    position: absolute;
+    top: -2.5rem; 
+    left: -2.5rem;
+    width: 5rem;
+    height: 5rem;
+    border: 3px solid var(--primary-green);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    border-bottom: none;
+    z-index: 10;
+}
+
+.contact-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 20;
+}
+
+
+.image-bottom-line {
+    height: 0.5rem;
+    background-color: var(--primary-green);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 66.666%;
+    border-bottom-right-radius: 0.75rem;
+}
+
+
+
+.form-column {
+    padding: 2rem; 
+}
+
+.form-group {
+    margin-bottom: 1.5rem; 
+  
+    text-align: center; 
+}
+
+.form-label {
+    display: block;
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.5rem; /* mb-2 */
+    text-align: center; 
+}
+
+.form-input,
+.form-textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem; /* px-4 py-3 */
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+    text-align: center; /* Center placeholder/input text */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4); /* Focus ring effect */
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+/* Submit Button Container */
+.submit-container {
+    display: flex;
+    /* Center the button */
+    justify-content: center; 
+    padding-top: 1rem; /* pt-4 */
+}
+
+.submit-button {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.75rem 2rem; /* py-3 px-8 */
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-radius: 9999px; /* rounded-full */
+    color: white;
+    background-color: var(--primary-green);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #059669; /* Darker emerald */
+    transform: scale(1.02);
+}
+
+.submit-button:focus {
+     outline: 2px solid transparent;
+     outline-offset: 2px;
+     box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.4);
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+    .contact-section {
+        flex-direction: row;
+    }
+    
+    .image-column,
+    .form-column {
+        width: 50%;
+    }
+    
+    .image-column {
+        padding: 0;
+    }
+    
+    .form-column {
+        padding: 3rem; 
+    }
+
+    .contact-image {
+        border-radius: 0;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        max-height: none;
+    }
+    
+    .graphic-frame {
+        min-height: 100%; /* Ensure full height on desktop */
+    }
+
+    .image-bottom-line {
+        width: 100%; /* Full width on desktop */
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 0;
+    }
+}

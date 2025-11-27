@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-green: #37A46A; 
+    --text-dark: #222222;
+    --text-gray: #4a4a4a;
+    --accent-blue: #007bff; /* Standard link color */
+    --light-bg: #f8f8f8;
+}
+
+.fl-insights-section {
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 4rem 1.5rem;
+}
+
+.fl-insights-container {
+    max-width: 75rem; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Base Article Styling */
+.fl-insight-article {
+    display: flex;
+    flex-direction: column; /* Stacked on mobile */
+    gap: 1.5rem;
+}
+
+.fl-article-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fl-article-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.fl-insight-article:hover .fl-article-image {
+    transform: scale(1.05);
+}
+
+.fl-article-content {
+    padding: 0.5rem 0;
+}
+
+.fl-article-heading {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: var(--text-dark);
+}
+
+.fl-article-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}
+
+.fl-article-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.fl-article-link:hover {
+    border-bottom: 2px solid var(--primary-green);
+}
+
+
+@media (min-width: 768px) {
+    .fl-insight-article {
+        flex-direction: row; 
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .fl-article-image-wrapper {
+        flex: 0 0 50%;
+        aspect-ratio: 1.5 / 1;
+    }
+
+    .fl-article-content {
+        flex: 0 0 50%;
+    }
+    
+    .fl-article-left {
+        flex-direction: row;
+    }
+
+    .fl-article-right {
+        flex-direction: row-reverse;
+    }
+
+    .fl-article-heading {
+        font-size: 2.2rem;
+    }
+}

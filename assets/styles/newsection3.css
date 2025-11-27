@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-green: #37A46A; /* Main background green */
+    --accent-green: #10B981; /* Brighter accent green */
+    --text-dark: #222222;
+    --text-light: #ffffff;
+    --text-gray: #4a4a4a;
+    --text-light-green: rgba(255, 255, 255, 0.9); 
+    --text-faded-green: rgba(255, 255, 255, 0.7); 
+}
+
+/* Overall Section Container */
+.fl-split-section {
+    background-color: var(--primary-green); /* Ensures full-width color consistency */
+    font-family: 'Inter', sans-serif;
+    padding: 0; /* Handled by internal columns */
+}
+
+.fl-split-container {
+    max-width: 100%; /* Allows the split columns to span full width */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stacked on mobile */
+}
+
+/* Left Column: White Background (Main Message) */
+.fl-split-left {
+    background-color: white;
+    padding: 3rem 1.5rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.fl-split-heading {
+    font-size: clamp(2.2rem, 5vw, 3.2rem); 
+    font-weight: 800; 
+    line-height: 1.2;
+    margin: 0 0 1.5rem;
+    color: var(--primary-green);
+    max-width: 15ch; /* Keeps heading compact and readable */
+}
+
+.fl-split-intro-text {
+    font-size: 1rem;
+    color: var(--text-gray);
+    max-width: 50ch; 
+    margin-bottom: 2rem;
+}
+
+.fl-split-cta-button {
+    display: inline-flex;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50px; 
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fl-split-cta-button:hover {
+    background-color: #2c8553; 
+    transform: translateY(-1px);
+}
+
+
+/* Right Column: Green Background (Services List) */
+.fl-split-right {
+    background-color: var(--primary-green);
+    padding: 3rem 1.5rem;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fl-right-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-green);
+    width: fit-content;
+    padding-bottom: 0.5rem;
+}
+
+.fl-service-item-v2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fl-service-item-v2:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.fl-service-icon-v2 svg {
+    color: var(--text-light); /* Icons are white */
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.fl-service-title-v2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--text-light);
+}
+
+.fl-service-description-v2 {
+    font-size: 0.95rem;
+    color: var(--text-faded-green);
+    margin: 0;
+}
+
+
+@media (min-width: 900px) {
+    .fl-split-container {
+        flex-direction: row; 
+        min-height: 70vh; 
+    }
+
+    .fl-split-left,
+    .fl-split-right {
+        flex: 1; 
+        padding: 5rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+
+    .fl-split-left {
+        align-items: flex-start;
+    }
+}

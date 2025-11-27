@@ -1,0 +1,47 @@
+@import "navbar.css";
+@import "buttons.css";
+@import "herobanner.css";
+@import "queue.css";
+@import "section2.css";
+@import "section3.css";
+@import "loginAdmin.css";
+@import "dashboardAdmin.css";
+@import "appointmentAdmin.css";
+@import 'connect.css';
+@import 'footer.css';
+@import 'service.css';
+@import 'newsection3.css';
+@import 'about.css';
+@import 'blog.css';
+@import 'contact.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+}
+body,html {
+    font-family: system-ui;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.services-item.animate-on-scroll {
+            transition-delay: 0s; 
+        }
+
+  .animate-on-scroll.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }       
+
+  .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px); 
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        }
+
+
