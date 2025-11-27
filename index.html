@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FastLane</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"> 
     <link rel="icon" href="./assets/images/logo.png">
@@ -50,7 +50,6 @@
             </div>
         </section>
 
-        <!--sec1-->
         <div class="section1-content animate-on-scroll">
             <div class="video-wrapper">
                 <video class="video-bg" autoplay muted loop>
@@ -64,12 +63,10 @@
                     efficient experiences for both customers and agents alike.</p>
                 <div class="button-approach">
                     <a href="./pages/services.html"><button class="btn new-btn btn-light navbutton rounded-5 p-3 ps-5 pe-5 fw-medium">Our Approach</button></a>
-                </div>          
+                </div>        
 
             </div>
         </div>
-
-        <!--sec2-->
 
         <section class="section2-content m-5 animate-on-scroll">
             <div class="text-flex d-flex align-items-center justify-content-center gap-2">
@@ -83,7 +80,6 @@
                     so you can focus on what matters.
                 </div>
             </div>
-            <!--image ni leyy AHHAHA-->
             <div class="section-logo d-flex align-items-center justify-content-center gap-5">
                 <div class="image-wrapper1 me-5"></div>
                 <div class="image-wrapper2 me-5"></div>
@@ -95,7 +91,6 @@
             </div>
         </section>
 
-        <!--section 3-->
         <section class="section3">
             <div class="hero-section3 animate-on-scroll">
                 <h1>Real-time insights,
@@ -104,10 +99,9 @@
                 <span>
                     We pride ourselves on our passionate commitment to our customers and our dedication to excellence and innovation. With a wealth of experience and a deep understanding of industry intricacies, we offer bespoke solutions tailored to meet the unique needs of each client.
                 </span>
-                <a href="./pages/about.html"><button class="btn btn-light btn-services rounded-5">Our Specialities</button></a>
+                <a href="./pages/about.html"><button class="btn btn-light btn-services rounded-5 m-3">Our Specialities</button></a>
             </div>
             <div class="services-section">
-                <!-- Apply animation class to individual service items -->
                 <div class="services-item animate-on-scroll">
                     <h1>Tailored Consulting</h1>
                     <span>From insightful industry analyses to strategic roadmap development, our team offers tailored consulting services designed to propel your contact center towards success.</span>
@@ -141,7 +135,6 @@
             </div>
         </section>
         
-        <!-- Contact Section Wrapper -->
         <section class="contact-section">
             <div class="image-column animate-on-scroll">
                 
@@ -158,7 +151,7 @@
 
 
             <div class="form-column animate-on-scroll">
-                <form action="#" method="POST">
+                <form id="contactForm" action="#" method="POST">
                     
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
@@ -182,7 +175,6 @@
                             required></textarea>
                     </div>
 
-                    <!-- Submit Button -->
                     <div class="submit-container">
                         <button 
                             type="submit" 
@@ -191,6 +183,8 @@
                             Send
                         </button>
                     </div>
+                    
+                    <p id="form-message" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">Thank you for your message! We'll be in touch soon.</p>
 
                 </form>
             </div>
@@ -200,7 +194,6 @@
         <footer class="fl-footer-section">
             <div class="fl-footer-container animate-on-scroll">
                 
-                <!-- Column 1 -->
                 <div class="fl-col fl-col-about">
                     <img 
                         src="https://placehold.co/150x50/10B981/FFFFFF?text=FastLane™" 
@@ -212,7 +205,6 @@
                     </p>
                 </div>
 
-                <!-- Column 2 -->
                 <div class="fl-col fl-col-links">
                     
                     <div class="fl-link-group">
@@ -252,17 +244,13 @@
         </footer>
 
     </main>
-    
-  
-    <script>
-       
-        function setupScrollAnimations() {
-            
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
-                root: null,
-                rootMargin: '0px 0px -20% 0px', 
+                root: null, 
+                rootMargin: '0px',
                 threshold: 0.1 
             };
 
@@ -277,73 +265,47 @@
                 });
             }, observerOptions);
 
-        
-            const serviceItems = document.querySelectorAll('.services-section .services-item');
-            serviceItems.forEach((item, index) => {
-               
-                item.style.transitionDelay = `${index * 0.15}s`;
-                observer.observe(item);
-            });
-            
-           
+  
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
             animatedElements.forEach(element => {
-              
-                if (!element.parentElement.classList.contains('services-section')) {
-                    observer.observe(element);
-                }
+                observer.observe(element);
             });
-        }
-
-        window.addEventListener('load', setupScrollAnimations);
-      
-        document.getElementById('appointmentForm')?.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const fullName = document.getElementById('fullName').value;
-            const phoneNumber = document.getElementById('phoneNumber').value;
-            const emailAddress = document.getElementById('emailAddress').value;
-            const appointmentType = document.getElementById('appointmentType').value;
-            const appointmentDate = document.getElementById('appointmentDate').value;
-            const appointmentTime = document.getElementById('appointmentTime').value;
-
-           
-            if (fullName && phoneNumber && emailAddress && appointmentType && appointmentDate && appointmentTime) {
-                const message = `Appointment booked successfully for ${fullName} on ${appointmentDate} at ${appointmentTime} for: ${appointmentType}.`;
-                showMessage(message);
-                
-               
-                console.log('Form Submitted:', {
-                    fullName,
-                    phoneNumber,
-                    emailAddress,
-                    appointmentType,
-                    appointmentDate,
-                    appointmentTime
-                });
-
-              
-                this.reset();
-            } else {
-                showMessage('Please fill in all required fields.', true);
-            }
         });
 
+
        
-        function showMessage(text, isError = false) {
-            const box = document.getElementById('message-box');
-            if (box) {
-                box.textContent = text;
-        
-                box.style.backgroundColor = isError ? '#DC2626' : '#37A46A'; 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+               
+                const targetId = this.getAttribute('href');
+                if (targetId.length > 1) { 
+                    e.preventDefault();
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-        
-                box.classList.add('show');
 
-                setTimeout(() => {
-                    box.classList.remove('show');
-                }, 4000);
-            }
-        }
+   
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          
+            event.preventDefault(); 
+            
+         
+            const form = event.target;
+            const messageElement = document.getElementById('form-message');
+            
+            
+            messageElement.style.display = 'none';
+
+          
+            setTimeout(() => {
+                messageElement.style.display = 'block'; 
+                form.reset(); 
+            }, 300); 
+        });
     </script>
 </body>
 </html>
